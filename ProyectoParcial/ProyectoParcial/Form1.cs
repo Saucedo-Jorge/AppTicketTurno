@@ -11,13 +11,11 @@ namespace ProyectoParcial
         {
             gbxRegistroAlumno.Visible = true;
             gbxModificacion.Visible = false;
-            gbxConsulta.Visible = false;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             gbxRegistroAlumno.Visible = false;
-            gbxConsulta.Visible = false;
             gbxModificacion.Visible = false;
         }
 
@@ -25,7 +23,11 @@ namespace ProyectoParcial
         {
             gbxModificacion.Visible = true;
             gbxRegistroAlumno.Visible = false;
-            gbxConsulta.Visible = false;
+            txtNombreModificacion.Enabled = false;
+            txtPaternoModificacion.Enabled=false;
+            txtMaternoModificacion.Enabled = false;
+            txtMunicipioModificacion.Enabled=false;
+            txtNEscolarModificacion.Enabled=false;
         }
 
         private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -33,7 +35,6 @@ namespace ProyectoParcial
 
             gbxModificacion.Visible = false;
             gbxRegistroAlumno.Visible = false;
-            gbxConsulta.Visible = true;
         }
 
         private void modoAdministradorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -48,6 +49,16 @@ namespace ProyectoParcial
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void txtPaternoModificacion_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbxModificacion_Enter(object sender, EventArgs e)
+        {
+            
         }
     }
 }
